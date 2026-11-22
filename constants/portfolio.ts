@@ -16,7 +16,6 @@ export const PERSONAL_INFO = {
   bio: "MERN Stack Developer with 2+ years building scalable full-stack applications. I turn complex problems into clean, performant code across the entire stack.",
   location: "Ahmedabad, India",
   email: "sutarwalanaqiya16@gmail.com",
-  phone: "+91 9924632972",
   linkedin: "https://www.linkedin.com/in/naqiya-sutarwala-5747751b0",
 } as const;
 
@@ -32,18 +31,49 @@ export const STATS: Stat[] = [
 export const SKILLS: Skill[] = [
   {
     id: "frontend",
-    category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript", "Redux Toolkit", "JavaScript"],
+    category: "Frontend & Mobile",
+    items: [
+      "React.js",
+      "Next.js",
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Redux Toolkit",
+      "Redux Thunk",
+      "Zustand",
+    ],
   },
   {
     id: "backend",
     category: "Backend",
-    items: ["Node.js", "Express.js", "NestJS", "REST APIs", "Socket.io"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "REST APIs",
+      "GraphQL",
+      "Socket.io",
+      "WebSockets",
+      "BullMQ",
+      "Multer",
+    ],
   },
   {
     id: "database",
     category: "Database",
-    items: ["MongoDB", "MySQL", "PostgreSQL", "TypeORM", "Mongoose"],
+    items: [
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
+      "AWS Redshift",
+      "TypeORM",
+      "Sequelize",
+      "Mongoose",
+    ],
   },
   {
     id: "ui",
@@ -52,25 +82,54 @@ export const SKILLS: Skill[] = [
       "Tailwind CSS",
       "Material UI",
       "MantineUI",
+      "Bootstrap",
+      "Radix UI",
+      "Recharts",
       "React Query",
+      "React Hook Form",
+      "Zod",
       "Formik",
     ],
   },
   {
     id: "devops",
-    category: "Cloud & DevOps",
-    items: ["AWS", "S3", "Docker", "CI/CD", "Kafka"],
+    category: "Cloud, DevOps & Tools",
+    items: [
+      "AWS",
+      "S3",
+      "VPC",
+      "Terraform",
+      "Docker",
+      "CI/CD",
+      "Kafka",
+      "Turborepo",
+      "Git",
+      "GitHub",
+      "Bitbucket",
+      "Jira",
+      "Trello",
+    ],
   },
   {
     id: "integrations",
     category: "Integrations",
-    items: ["Stripe", "Twilio", "BigCommerce", "Sanity", "Webhooks"],
+    items: [
+      "Stripe",
+      "Razorpay",
+      "Twilio",
+      "AWS SES",
+      "BigCommerce",
+      "Sanity",
+      "Contentstack",
+      "Webhooks",
+    ],
   },
 ];
 
 export const TICKER_ITEMS = [
   "React.js",
   "Next.js",
+  "React Native",
   "TypeScript",
   "Node.js",
   "MongoDB",
@@ -85,6 +144,8 @@ export const TICKER_ITEMS = [
   "Express.js",
   "Kafka",
   "CI/CD",
+  "Redis",
+  "Terraform",
 ];
 
 /* ─── Projects ──────────────────────────────── */
@@ -144,18 +205,54 @@ export const PROJECTS: Project[] = [
     type: "Full Stack",
     link: "http://login.thymos.health/",
   },
+  {
+    id: "practice-suite",
+    number: "06",
+    domain: "AccountingTech",
+    name: "Accounting Practice Suite",
+    description:
+      "Multi-app platform for accounting firms. Led development of practice management and client onboarding across frontend and backend, and migrated an existing document-processing app into the suite.",
+    tech: ["Next.js", "TypeScript", "NestJS", "PostgreSQL", "BullMQ", "Turborepo"],
+    type: "Full Stack",
+    isConfidential: true,
+  },
+  {
+    id: "dodare",
+    number: "07",
+    domain: "Productivity",
+    name: "DoDare",
+    description:
+      "Goal accountability app where users back goals with a small pledge and submit proof before the deadline. Building the mobile app, API, and admin panel, with UPI AutoPay via Razorpay.",
+    tech: ["React Native", "Expo", "React.js", "NestJS", "PostgreSQL", "Razorpay"],
+    type: "Full Stack · In Development",
+  },
 ];
 
 /* ─── Experience ────────────────────────────── */
 export const EXPERIENCES: Experience[] = [
+  {
+    id: "tm-systems",
+    company: "TM Systems",
+    role: "Full Stack Developer",
+    location: "Ahmedabad, India",
+    startDate: "Jul 2026",
+    endDate: null,
+    isCurrent: true,
+  },
   {
     id: "qrious",
     company: "Qrious Tech Team LLP",
     role: "MERN Stack Developer",
     location: "Ahmedabad, India",
     startDate: "Jan 2024",
-    endDate: null,
-    isCurrent: true,
+    endDate: "Jun 2026",
+    isCurrent: false,
+    highlights: [
+      "Built full-stack applications with React, Next.js, Node.js, and NestJS across healthcare, property rental, education, and e-commerce.",
+      "Developed a healthcare platform integrated with OystEHR, covering appointments, patient charts, chat, and lab orders.",
+      "Built headless commerce features on Next.js and BigCommerce, including rewards, returns, SEO, and analytics.",
+      "Integrated Stripe payments and Twilio real-time messaging into a property rental platform.",
+    ],
   },
 ];
 
@@ -190,13 +287,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     href: "https://www.linkedin.com/in/naqiya-sutarwala-5747751b0",
     isExternal: true,
   },
-  // {
-  //   id: "phone",
-  //   icon: "📞",
-  //   label: "+91 99246 32972",
-  //   href: "tel:+919924632972",
-  //   isExternal: false,
-  // },
 ];
 
 export const NAV_LINKS = [

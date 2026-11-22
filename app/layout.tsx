@@ -1,11 +1,17 @@
 import type { Metadata, Viewport } from "next";
+import { Anek_Latin } from "next/font/google";
 
-import { PERSONAL_INFO } from "@/constants/portfolio";
-import "./globals.css";
-import { Cursor } from "@/components/layout/Cursor";
+import { NAV_LINKS, PERSONAL_INFO } from "@/constants/portfolio";
 import { Navbar } from "@/components/layout/Navbar";
+import "./globals.css";
 
-/* ─── Metadata ───────────────────────────────── */
+const anek = Anek_Latin({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  display: "swap",
+  variable: "--font",
+});
+
 export const metadata: Metadata = {
   title: {
     default: `${PERSONAL_INFO.name} — ${PERSONAL_INFO.role}`,
@@ -34,33 +40,18 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d0d0d",
+  themeColor: "#32103f",
   width: "device-width",
   initialScale: 1,
 };
 
-/* ─── Layout ─────────────────────────────────── */
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={anek.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
       <body>
-        {/* Cursor — client only, no SSR */}
-        <Cursor />
-        <Navbar />
+        <Navbar links={NAV_LINKS} />
         {children}
       </body>
     </html>
